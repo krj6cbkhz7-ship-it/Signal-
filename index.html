@@ -1,154 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CPV PRIVATE LINK</title>
 
-  <title>CPV SIGNAL PRIVATE LINK</title>
+		<style>
+			body {
+			  margin: 0;
+			  min-height: 100vh;
+			  display: flex;
+			  justify-content: center;
+			  align-items: center;
+			  background: #000;
+			  color: red;
+			  font-family: Arial, sans-serif;
+			  text-align: center;
+			}
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+			.box {
+			  width: 85%;
+			  max-width: 400px;
+			  padding: 35px 25px;
+			  border: 1px solid #333;
+			  border-radius: 15px;
+			  background: #111;
+			}
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: #000;
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+			h1 {
+			  margin-bottom: 8px;
+			  font-size: 30px;
+			  letter-spacing: 2px;
+			}
 
-    .container {
-      width: 90%;
-      max-width: 400px;
-      text-align: center;
-      padding: 30px;
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 18px;
-    }
+			.subtitle {
+			  color: #aaa;
+			  margin-bottom: 30px;
+			}
 
-    h1 {
-      color: red;
-      margin-bottom: 10px;
-    }
+			input {
+			  width: 90%;
+			  padding: 14px;
+			  border-radius: 8px;
+			  border: 1px solid #444;
+			  background: #222;
+			  color: white;
+			  text-align: center;
+			  font-size: 16px;
+			  margin-bottom: 15px;
+			}
 
-    .subtitle {
-      color: #aaa;
-      margin-bottom: 25px;
-    }
+			button {
+			  width: 98%;
+			  padding: 14px;
+			  border: none;
+			  border-radius: 8px;
+			  background: white;
+			  color: blue;
+			  font-size: 16px;
+			  font-weight: bold;
+			  cursor: pointer;
+			  margin-bottom: 12px;
+			}
 
-    input {
-      width: 100%;
-      padding: 15px;
-      border: 1px solid #444;
-      border-radius: 10px;
-      background: #222;
-      color: white;
-      text-align: center;
-      font-size: 16px;
-      outline: none;
-    }
+			.activation {
+			  background: #222;
+			  color: red;
+			  border: 1px solid #555;
+			}
 
-    button {
-      width: 100%;
-      padding: 14px;
-      margin-top: 12px;
-      border: none;
-      border-radius: 25px;
-      font-size: 15px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+			#message {
+			  margin-top: 18px;
+			}
+		</style>
+	</head>
 
-    .activate {
-      background: red;
-      color: white;
-    }
+	<body>
+		<div class="box">
+			<h1>WELCOME TO CPV PRIVATE LINK 🥵</h1>
 
-    .get-code {
-      background: white;
-      color: black;
-    }
+			<div class="subtitle">
+				The most discreet private link for all private content 🥵😋
+			</div>
 
-    #message {
-      margin-top: 15px;
-      font-size: 14px;
-    }
-  </style>
-</head>
+			<input
+				type="text"
+				id="code"
+				placeholder="Enter your membership activation code"
+			/>
 
-<body>
+			<button onclick="unlockLink()">ENTER</button>
 
-  <div class="container">
+			<button class="activation" onclick="getActivation()">
+				GET ACTIVATION CODE
+			</button>
 
-    <h1>🔐 CPV PRIVATE LINK</h1>
+			<div id="message"></div>
+		</div>
 
-    <div class="subtitle">
-      Enter your activation code to continue
-    </div>
+		<script>
+			function unlockLink() {
 
-    <input
-      type="text"
-      id="activationCode"
-      placeholder="Enter activation code"
-      autocomplete="off"
-    >
+			  const enteredCode =
+			    document.getElementById("code").value;
 
-    <button
-      class="activate"
-      onclick="activate()">
-      ACTIVATE
-    </button>
+			  const correctCode = "private0813";
 
-    <button
-      class="get-code"
-      onclick="getActivationCode()">
-      GET ACTIVATION CODE
-    </button>
+			  if (enteredCode === correctCode) {
 
-    <div id="message"></div>
+			    document.getElementById("message").innerHTML =
+			      "Access granted 🔓";
 
-  </div>
+			    // Replace this with your actual private-content URL.
+			    setTimeout(function() {
+			      window.location.href = "https:/private0813.com";
+			    }, 1000);
 
-  <script>
+			  } else {
 
-    function activate() {
+			    document.getElementById("message").innerHTML =
+			      "Invalid activation code ❌";
+			  }
+			}
 
-      const code =
-        document.getElementById("activationCode").value.trim();
+			function getActivation() {
 
-      const message =
-        document.getElementById("message");
-
-      if (code === "") {
-
-        message.textContent =
-          "Please enter your activation code.";
-
-        message.style.color = "orange";
-
-        return;
-      }
-
-      message.textContent =
-        "Invalid activation code.";
-
-      message.style.color = "red";
-    }
-
-
-    function getActivationCode() {
-
-      window.location.href =
-        "https://signal.org/";
-    }
-
-  </script>
-
-</body>
+			  window.open(
+			    "https://signal.me/#eu/HMEIWKSlZYMdWQBN-FUza5ksZMf_vWCs1YkRS170vnxhf4hLXqZMfaPNyh1yCCTn",
+			    "_blank"
+			  );
+			}
+		</script>
+	</body>
 </html>
